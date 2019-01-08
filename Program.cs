@@ -16,7 +16,7 @@ class Example
 
 		LLs.AddLast(LLi);
 
-		Console.WriteLine("We have the following {0} items in the is the list.", LLs.Count());
+		Console.WriteLine("We have the following {0} items in the is the list.", LLs.Count);
 
 		foreach (var item in LLs)
 		{
