@@ -3,6 +3,7 @@
 To join the lists non-destructively you can use `System.Linq` to create an `IEnumerable` object that enumerates the first list and then the second.
 
 Output:
+
     We have the following 4 items in the is the list.
     Node's data is Dudeo
     Node's data is Smell
