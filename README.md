@@ -1,19 +1,11 @@
 # LinkedList
 
-An example attempting to link two lists of different types.
+Okay with this version of the program, we get the output:
 
-With line 18 commented out:
-
-    //LLs.AddLast(LLi);
-
-The program will compile and produce the output:
-
-    We have the following 2 items in the is the list.
+    We have the following 4 items in the is the list.
     Node's data is Dudeo
     Node's data is Smell
+    Node's data is 10
+    Node's data is 9
 
-However, if we attempt to join the lists with line 18 we get this error:
-
-    Program.cs(18,15): error CS1503: Argument 1: cannot convert from 'System.Collections.Generic.LinkedList<int>' to 'string'
-
-The compiler is complaining that it can't link the LinkedList containing int objects to a LinkedList containing string objects.
+However, the program isn't doing exactly what we want. Instead of joined the two lists together, it's adding the elements of the other list in order one be one. This is an O(n) operation where n is the number of items in the second list.
