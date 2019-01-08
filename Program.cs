@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 class Example
 {
 	static void Main(string[] args)
 	{
-		LinkedList<String> LLs = new LinkedList<string>();
-		LinkedList<int> LLi = new LinkedList<int>();
+		LinkedList<object> LLs = new LinkedList<object>();
+		LinkedList<object> LLi = new LinkedList<object>();
 
 		LLs.AddLast("Smell");
 		LLs.AddFirst("Dudeo");
@@ -14,10 +15,9 @@ class Example
 		LLi.AddFirst(10);
 		LLi.AddLast(9);
 
-		// Linking the lists doesn't work
-		//LLs.AddLast(LLi);
+		LLs.AddLast(LLi);
 
-		Console.WriteLine("We have the following {0} items in the is the list.", LLs.Count);
+		Console.WriteLine("We have the following {0} items in the is the list.", LLs.Count());
 
 		foreach (var item in LLs)
 		{
