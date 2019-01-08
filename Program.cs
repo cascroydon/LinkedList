@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 class Example
 {
@@ -14,11 +15,11 @@ class Example
 		LLi.AddFirst(10);
 		LLi.AddLast(9);
 
-		LLs.AddLast(LLi);
+		IEnumerable<object> LL = LLs.Concat(LLi);
 
-		Console.WriteLine("We have the following {0} items in the is the list.", LLs.Count);
+		Console.WriteLine("We have the following {0} items in the is the list.", LL.Count());
 
-		foreach (var item in LLs)
+		foreach (var item in LL)
 		{
 			Console.WriteLine("Node's data is {0}", item);
 		}

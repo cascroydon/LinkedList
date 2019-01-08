@@ -1,20 +1,12 @@
 # LinkedList
 
-To fix the error we can convert the lists to `LinkedList<object>`.
+To join the lists non-destructively you can use `System.Linq` to create an `IEnumerable` object that enumerates the first list and then the second.
 
-This allows us to compile and run. However now our output is:
-
-    We have the following 3 items in the is the list.
+Output:
+    We have the following 4 items in the is the list.
     Node's data is Dudeo
     Node's data is Smell
-    Node's data is System.Collections.Generic.LinkedList`1[System.Object]
+    Node's data is 10
+    Node's data is 9
 
-The line:
-
-    LLs.AddLast(LLi);
-
-It isn't joining lists `LLi` and `LLs` together, it's adding list `LLi` as an element to the end of list `LLs`. `LinkedList<object>` is also a type of `object` and is added like any other element.
-
-Is there an alternative function that we call to join these lists instead? [Unfortunately not](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.linkedlist-1?view=netframework-4.7.2]):
-
-> The `LinkedList<T>` class does not support chaining, splitting, cycles, or other features that can leave the list in an inconsistent state. The list remains consistent on a single thread. The only multithreaded scenario supported by `LinkedList<T>` is multithreaded read operations.
+This isn't giving you a list, but an intermediate object than captures the action of joining the lists together. You can see this by adding an item to the end `LLs` after performing the `Concat` operation, for example.
